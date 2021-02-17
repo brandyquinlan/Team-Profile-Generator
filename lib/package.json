@@ -21,7 +21,10 @@
     },
     "homepage": "https://github.com/brandyquinlan/Team_Profile_Generator#readme",
     "dependencies": {
+        "axios": "^0.21.1",
         "inquirer": "^7.3.3",
-        "jest": "^26.6.3"
-    }
+        "jest": "^26.6.3",
+        "rxjs": "^6.6.3"
+    },
+    "devDependencies": {}
 }
