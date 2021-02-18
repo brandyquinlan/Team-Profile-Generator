@@ -4,13 +4,10 @@ const Employee = require("./lib/Employee");
 const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-
-
-// Initialize a new Employee object
-// const employee = new Employee();
-
+const generateHTML = require('./src/generateHTML');
 
 let team = [{}];
+// let mgrName = team[0].name;
 let TeamMember;
 
 let isManager = () => {
@@ -55,8 +52,9 @@ let getManager = () => {
             console.log(answers);
             team.push(answers);
             console.log(team);
+            const manager = new Manager(answers.name, answers.id, answers.email, answers.office, answers.role);
+            console.log(manager.name);
             newAdd();
-
         });
 }
 
@@ -88,6 +86,8 @@ let getEngineer = () => {
             console.log(answers);
             team.push(answers);
             console.log(team);
+            const engineer = new Engineer(answers.name, answers.id, answers.email, answers.role, answers.github);
+            console.log(engineer.name);
             newAdd();
         });
 };
@@ -118,7 +118,6 @@ let newAdd = () => {
                 if (answers.role === 'Intern') {
                     getIntern();
                 }
-
             }
         });
 }
@@ -151,34 +150,10 @@ let getIntern = () => {
             console.log(answers);
             team.push(answers);
             console.log(team);
+            const intern = new Intern(answers.name, answers.id, answers.email, answers.office, answers.role);
+            console.log(intern.name);
             newAdd();
         })
 };
 
 isManager();
-
-
-
-const generateHTML = (answers) =>
-    `<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-  <title>Document</title>
-</head>
-<body>
-  <div class="jumbotron jumbotron-fluid">
-  <div class="container">
-    <h1 class="display-4">${team[0].name}</h1>
-    <p class="lead">${team[0].role}</p>
-    <ul class="list-group">
-      <li class="list-group-item">id: ${team[0].id}</li>
-      <li class="list-group-item">email: ${team[0].email}</li>
-      <li class="list-group-item">office: ${team[0].office}</li>
-    </ul>
-  </div>
-</div>
-</body>
-</html>`;
