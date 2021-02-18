@@ -1,34 +1,21 @@
 const inquirer = require("inquirer");
 const fs = require("fs");
-const Manager = require('./lib/Manager');
+const Employee = require("./lib/Employee");
+const Manager = require("./lib/Manager");
 const Engineer = require("./lib/Engineer");
 const Intern = require("./lib/Intern");
-const Employee = require("./lib/Employee");
+
 
 // Initialize a new Employee object
 // const employee = new Employee();
 
-// Start playing
-//employee.play();
 
-// employee.play();
+let team = [{}];
+let TeamMember;
 
-// let team = [{}];
-// let TeamMember;
 
-clearTeamMember = () => {
-    TeamMember = {
-        name: '',
-        id: '',
-        email: '',
-        role: '',
-        office: '',
-        github: '',
-        school: '',
-    };
-};
 
-isManager = () => {
+let isManager = () => {
     inquirer
         .prompt([{
             name: 'isManager',
@@ -50,7 +37,7 @@ isManager = () => {
         // .catch((err) => console.error(err));
 };
 
-getManager = () => {
+let getManager = () => {
     inquirer
         .prompt([{
             name: 'mgrName',
@@ -74,11 +61,11 @@ getManager = () => {
             message: 'What type of team member would you like to add?',
             choices: ['Engineer',
                 'Intern',
-                'I do not want to add another member'
+                'Exit'
             ]
         }])
         .then((answers) => {
-            if (answers.role === 'I do not want to add another member') {
+            if (answers.role === 'Exit') {
                 console.log('Goodbye');
             } else {
                 console.log(answers);
@@ -87,14 +74,14 @@ getManager = () => {
                 team.push(answers);
                 console.log(team);
             }
-            // if (type === 'Intern' || type === 'Engineer') {
-            //     let role = 'Employee';
-            //     console.log(role);
-            // }
+            if (type === 'Intern' || type === 'Engineer') {
+                let role = 'Employee';
+                console.log(role);
+            }
         });
 }
 
-getEmployee = () => {
+let getEmployee = () => {
     inquirer
     prompts([{
                 type: 'input',
@@ -120,7 +107,7 @@ getEmployee = () => {
         .then((answers) => {});
 };
 
-newAdd = () => {
+let newAdd = () => {
     inquirer
         .prompt([{
             name: 'role',
@@ -145,7 +132,7 @@ newAdd = () => {
         });
 }
 
-getIntern = () => {
+let getIntern = () => {
     inquirer
         .prompt([{
                 type: 'input',
@@ -185,8 +172,20 @@ getIntern = () => {
         })
 };
 
+let clearTeamMember = () => {
+    TeamMember = {
+        name: '',
+        id: '',
+        email: '',
+        role: '',
+        office: '',
+        github: '',
+        school: '',
+    };
+};
+isManager();
 
-
+// isManager();
 
 // const generateHTML = (answers) =>
 //     `<!DOCTYPE html>
