@@ -10,7 +10,6 @@ let newEngineer;
 let newManager;
 let newIntern;
 
-
 let isManager = () => {
     inquirer
         .prompt([{
@@ -33,7 +32,8 @@ let getManager = () => {
         .prompt([{
             name: 'name',
             type: 'input',
-            message: 'What is your name?'
+            message: 'What is your name?',
+            validate: validateText
         }, {
             name: 'id',
             type: 'input',
@@ -47,7 +47,8 @@ let getManager = () => {
         }, {
             name: 'office',
             type: 'input',
-            message: 'What is your office number?'
+            message: 'What is your office number?',
+            validate: validateNumber
         }])
         .then((answers) => {
             answers.role = 'Manager';
@@ -92,7 +93,8 @@ let getEngineer = () => {
         .prompt([{
                 type: 'input',
                 name: 'name',
-                message: 'What is the engineer\'s name?'
+                message: 'What is the engineer\'s name?',
+                validate: validateText
             },
             {
                 type: 'input',
@@ -109,7 +111,8 @@ let getEngineer = () => {
             {
                 type: 'input',
                 name: 'github',
-                message: 'What is the name of engineer\'s github profile?'
+                message: 'What is the name of engineer\'s github profile?',
+                validate: validateText
             }
         ])
         .then((answers) => {
@@ -125,7 +128,8 @@ let getIntern = () => {
         .prompt([{
                 type: 'input',
                 name: 'name',
-                message: 'What is the intern\'s name?'
+                message: 'What is the intern\'s name?',
+                validate: validateText
             },
             {
                 type: 'input',
@@ -142,7 +146,8 @@ let getIntern = () => {
             {
                 type: 'input',
                 name: 'school',
-                message: 'What is the name of intern\'s school?'
+                message: 'What is the name of intern\'s school?',
+                validate: validateText
             },
         ])
         .then((answers) => {
@@ -154,7 +159,7 @@ let getIntern = () => {
 }
 
 let validateEmail = (input) => {
-    if (/@/.test(input) === false || /.com/.test(input) === false) {
+    if (/.com/.test(input) === false || /@/.test(input) === false) {
         throw new Error("Please input a valid email address");
     } else {
         return true;
@@ -162,11 +167,17 @@ let validateEmail = (input) => {
 }
 
 let validateNumber = (input) => {
-    if (/[0-9]/.test(input) === false || /[a-zA-Z]/.test(input) === true) {
-        throw new Error("Please input a number");
-    } else {
-        return true;
+    if (isNaN(input)) {
+        return "Please enter a number";
     }
+    return true;
+}
+
+let validateText = (input) => {
+    if (!input) {
+        return "Input cannot be blank";
+    }
+    return true;
 }
 
 let generateHTML = (newManager, newEngineer, newIntern) => {
