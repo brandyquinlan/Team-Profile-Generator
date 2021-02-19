@@ -37,11 +37,13 @@ let getManager = () => {
         }, {
             name: 'id',
             type: 'input',
-            message: 'What is your id?'
+            message: 'What is your id?',
+            validate: validateNumber
         }, {
             name: 'email',
             type: 'input',
-            message: 'What is your email?'
+            message: 'What is your email?',
+            validate: validateEmail
         }, {
             name: 'office',
             type: 'input',
@@ -72,7 +74,7 @@ let newAdd = () => {
                 console.log('Goodbye');
                 const htmlPageContent = generateHTML(newManager, newEngineer, newIntern);
                 fs.writeFile('./output/index.html', htmlPageContent, (err) =>
-                    err ? console.log(err) : console.log('Successfully created index.html!')
+                    err ? console.log(err) : console.log('Successfully created index.html in Output folder!')
                 );
             } else {
                 if (answers.role === 'Engineer') {
@@ -95,12 +97,14 @@ let getEngineer = () => {
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the engineer\'s id?'
+                message: 'What is the engineer\'s id?',
+                validate: validateNumber
             },
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is the engineer\'s email?'
+                message: 'What is the engineer\'s email?',
+                validate: validateEmail
             },
             {
                 type: 'input',
@@ -114,7 +118,7 @@ let getEngineer = () => {
             newEngineer = new Engineer(answers.name, answers.id, answers.email, answers.role, answers.github);
             newAdd();
         });
-};
+}
 
 let getIntern = () => {
     inquirer
@@ -126,12 +130,14 @@ let getIntern = () => {
             {
                 type: 'input',
                 name: 'id',
-                message: 'What is the intern\'s id?'
+                message: 'What is the intern\'s id?',
+                validate: validateNumber
             },
             {
                 type: 'input',
                 name: 'email',
-                message: 'What is the intern\'s email?'
+                message: 'What is the intern\'s email?',
+                validate: validateEmail
             },
             {
                 type: 'input',
@@ -145,7 +151,23 @@ let getIntern = () => {
             newIntern = new Intern(answers.name, answers.id, answers.email, answers.role, answers.school);
             newAdd();
         })
-};
+}
+
+let validateEmail = (input) => {
+    if (/@/.test(input) === false || /.com/.test(input) === false) {
+        throw new Error("Please input a valid email address");
+    } else {
+        return true;
+    }
+}
+
+let validateNumber = (input) => {
+    if (/[0-9]/.test(input) === false || /[a-zA-Z]/.test(input) === true) {
+        throw new Error("Please input a number");
+    } else {
+        return true;
+    }
+}
 
 let generateHTML = (newManager, newEngineer, newIntern) => {
     return `<!DOCTYPE html>
@@ -181,7 +203,7 @@ let generateHTML = (newManager, newEngineer, newIntern) => {
             </div>
             <div class="card engineer">
                 <div class="card-header">
-                    <h3 class="card-title">${newEngineer.role}
+                    <h3 class="card-title">Engineer
                         <i class="fas fa-glasses"></i>
                     </h3>
                     <p class="lead">${newEngineer.name}</p>
