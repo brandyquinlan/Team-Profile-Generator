@@ -1,0 +1,34 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+/** Base Styles **/
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background: #fff;
+}
+
+.jumbotron {
+    background-image: url('../src/markus-spiske-Skf7HxARcoc-unsplash.png');
+    background-size: cover;
+    background: contain;
+    width: 100%;
+    height: 100px;
+    max-height: 120px;
+    color: #fff;
+    padding: 25px;
+}
+
+.card-header {
+    background: #52abcb;
+    color: #fff;
+}
+
+.card {
+    box-shadow: 1px 1px 1px #ccc;
+    ;
+}
