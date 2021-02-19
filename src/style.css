@@ -4,9 +4,6 @@
     padding: 0;
 }
 
-
-/** Base Styles **/
-
 body {
     font-family: 'Raleway', sans-serif;
     background: #fff;
@@ -24,11 +21,16 @@ body {
 }
 
 .card-header {
-    background: #52abcb;
+    background: #6eabcb;
     color: #fff;
 }
 
 .card {
     box-shadow: 1px 1px 1px #ccc;
     ;
+}
+
+h3,
+p {
+    margin-bottom: 0;
 }
