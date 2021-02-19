@@ -206,8 +206,8 @@ let generateHTML = (newManager, newEngineer, newIntern) => {
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item">id: ${newManager.id}</li>
-                        <li class="list-group-item">email: ${newManager.email}</li>
+                        <li class="list-group-item">ID: ${newManager.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${newManager.email}" target="blank">${newManager.email}</a></li>
                         <li class="list-group-item">Office: ${newManager.office}</li>
                     </ul>
                 </div>
@@ -221,9 +221,9 @@ let generateHTML = (newManager, newEngineer, newIntern) => {
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item">id: ${newEngineer.id}</li>
-                        <li class="list-group-item">email: ${newEngineer.email}</li>
-                        <li class="list-group-item">GitHub: ${newEngineer.github}</li>
+                        <li class="list-group-item">ID: ${newEngineer.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${newEngineer.email}" target="blank">${newEngineer.email}</a></li>
+                        <li class="list-group-item">GitHub: <a href="http://github.com/${newEngineer.github}" target='blank'>http://github.com/${newEngineer.github}</a></li>
                     </ul>
                 </div>
             </div>
@@ -236,8 +236,8 @@ let generateHTML = (newManager, newEngineer, newIntern) => {
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <li class="list-group-item">id: ${newIntern.id}</li>
-                        <li class="list-group-item">email: ${newIntern.email}</li>
+                        <li class="list-group-item">ID: ${newIntern.id}</li>
+                        <li class="list-group-item">Email: <a href="mailto:${newIntern.email}" target="blank">${newIntern.email}</a></li>
                         <li class="list-group-item">School: ${newIntern.school}</li>
                     </ul>
                 </div>
