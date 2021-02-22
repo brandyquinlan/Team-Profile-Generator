@@ -2,23 +2,15 @@
 
 ## Table of Contents
 
-- [10 Object-Oriented Programming: Team Profile Generator](#10-object-oriented-programming-team-profile-generator)
-  - [Table of Contents](#table-of-contents)
-  - [Program Description](#program-description)
-  - [URL and Repo Location](#url-and-repo-location)
-  - [Installation Instructions](#installation-instructions)
-    - [Usage information](#usage-information)
-    - [Licenses](#licenses)
-    - [Contributing](#contributing)
-  - [Tests](#tests)
-  - [DEMO](#demo)
-  - [Screenshots](#screenshots)
-    - [User Story](#user-story)
-    - [HTML file dynamically generated with NodeJS CLI](#html-file-dynamically-generated-with-nodejs-cli)
-      - [Responsive Design](#responsive-design)
-    - [Acceptance Criteria](#acceptance-criteria)
-    - [CLI-Meets all Acceptance Criteria](#cli-meets-all-acceptance-criteria)
-  - [Questions](#questions)
+- [Description](#program-description)
+- [Installation](#installation-instructions)
+- [Usage](#usage-information) 
+- [License](#licenses) 
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [DEMO VIDEO](#DEMO-click-link-to-view)
+- [Screenshots](#screenshots)
+- [Questions](#questions)
 
 ## Program Description
 A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Inquirer and Jest packages are used.
@@ -46,11 +38,7 @@ Engineer.test.js
 Intern.test.js
 Manager.test.js
 ```
-<<<<<<< HEAD
-
-=======
-
->>>>>>> cc52045f47965fadfa2fc775c8babcd34c89d4d8
+ 
 ## DEMO
 * [Link to demo](https://drive.google.com/file/d/1gAw_Z9mYlSkxO-PZpA-X3sgWMqO1pMaK/view?usp=sharing)
 
@@ -81,11 +69,7 @@ WHEN I decide to finish building my team
   THEN I exit the application, and the HTML is generated
 ```
 ### CLI-Meets all Acceptance Criteria
-<<<<<<< HEAD
-![cli](src/img/cli.png)
-=======
 ![cli](src/cli.png)
->>>>>>> 7e312618ff6512467a5fd78b584596f2c6d65c2c
 
 ## Questions
 Please contact me with questions:
@@ -93,5 +77,4 @@ Please contact me with questions:
 Brandy Quinlan
 Email: brandyquinlan@gmail.com
 Github link: brandyquinlan
-```
 ```
