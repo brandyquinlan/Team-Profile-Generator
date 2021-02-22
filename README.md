@@ -69,7 +69,7 @@ WHEN I decide to finish building my team
   THEN I exit the application, and the HTML is generated
 ```
 ### CLI-Meets all Acceptance Criteria
-![cli](develop/img/cli.png)
+![cli](assets/cli.png)
 
 ## Questions
 Please contact me with questions:
