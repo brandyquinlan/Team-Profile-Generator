@@ -81,7 +81,11 @@ WHEN I decide to finish building my team
   THEN I exit the application, and the HTML is generated
 ```
 ### CLI-Meets all Acceptance Criteria
+<<<<<<< HEAD
 ![cli](src/img/cli.png)
+=======
+![cli](src/cli.png)
+>>>>>>> 7e312618ff6512467a5fd78b584596f2c6d65c2c
 
 ## Questions
 Please contact me with questions:
