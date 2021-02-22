@@ -51,9 +51,9 @@ I WANT to generate a webpage that displays my team's basic info
 SO THAT I have quick access to their emails and GitHub profiles
 ```
 ### HTML file dynamically generated with NodeJS CLI
-![output HTML](assets/Team_Profile_HTML_Output.png)
+![output HTML](src/Team_Profile_HTML_Output.png)
 #### Responsive Design
-![output HTML responsive](assets/Team_Profile_HTML_Output_res.png)
+![output HTML responsive](src/Team_Profile_HTML_Output_res.png)
 
 ### Acceptance Criteria
 ```
@@ -69,7 +69,7 @@ WHEN I decide to finish building my team
   THEN I exit the application, and the HTML is generated
 ```
 ### CLI-Meets all Acceptance Criteria
-![cli](assets/cli.png)
+![cli](src/cli.png)
 
 ## Questions
 Please contact me with questions:
