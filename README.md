@@ -40,7 +40,7 @@ Manager.test.js
 ```
  
 ## DEMO
-* [Link to demo](https://drive.google.com/file/d/1gAw_Z9mYlSkxO-PZpA-X3sgWMqO1pMaK/view?usp=sharing)
+* [Link to demo (https://drive.google.com/file/d/1gAw_Z9mYlSkxO-PZpA-X3sgWMqO1pMaK/view?usp=sharing)](https://drive.google.com/file/d/1gAw_Z9mYlSkxO-PZpA-X3sgWMqO1pMaK/view?usp=sharing)
 
 ## Screenshots
 
