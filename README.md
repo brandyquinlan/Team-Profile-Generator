@@ -15,8 +15,7 @@
 ## Program Description
 A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Inquirer and Jest packages are used.
 
-## URL and Repo Location
-The url for the site is: (https://brandyquinlan.github.io/Team_Profile_Generator/)<br>
+## GitHub Repo Location
 The repo is located here: (https://github.com/brandyquinlan/Team_Profile_Generator/)
 
 ## Installation Instructions
