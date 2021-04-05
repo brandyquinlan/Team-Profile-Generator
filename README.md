@@ -1,4 +1,4 @@
-# 10 Object-Oriented Programming: Team Profile Generator
+# Team Profile Generator
 
 ## Table of Contents
 
@@ -16,7 +16,7 @@
 A Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. Inquirer and Jest packages are used.
 
 ## GitHub Repo Location
-The repo is located here: (https://github.com/brandyquinlan/Team_Profile_Generator/)
+The repo is located here: (https://github.com/brandyquinlan/Team-Profile-Generator/)
 
 ## Installation Instructions
   Run the command "npm i" to install dependencies
@@ -74,6 +74,8 @@ WHEN I decide to finish building my team
 Please contact me with questions:
 ```
 Brandy Quinlan
-Email: brandyquinlan@gmail.com
-Github link: brandyquinlan
+<br>
+Email: <brandyquinlan@gmail.com>
+<br>
+Github: [https://github.com/brandyquinlan/](https://github.com/brandyquinlan/)
 ```
