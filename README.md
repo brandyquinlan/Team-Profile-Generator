@@ -72,10 +72,10 @@ WHEN I decide to finish building my team
 
 ## Questions
 Please contact me with questions:
-```
+
 Brandy Quinlan
 <br>
 Email: <brandyquinlan@gmail.com>
 <br>
 Github: [https://github.com/brandyquinlan/](https://github.com/brandyquinlan/)
-```
+
